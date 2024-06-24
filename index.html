@@ -25,35 +25,6 @@
                     <button type="button" class="btn btn-success p-2" data-bs-toggle="modal" data-bs-target="#mi-modal-post">
                         Create a new post
                     </button>
-
-                    <!-- Modal dialogo -->
-                    <div class="modal fade" id="mi-modal-post" tabindex="-1" aria-labelledby="mi-modal-postlLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="mi-modal-postlLabel">Create Post</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  <form class="was-validated">
-                                    <div class="mb-3">
-                                      <label for="validationTextarea" class="form-label">Caption</label>
-                                      <textarea class="form-control" id="validationTextarea" placeholder="Add the caption of your post here" required></textarea>
-                                      <div class="invalid-feedback">
-                                        <i class="fa-solid fa-camera p-2 mt-2 bg-light border"></i>
-                                        <i class="fa-solid fa-location-dot p-2 bg-light border"></i>
-                                      </div>
-                                    </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn bg-dark-subtle" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-success">Publish</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
                 <li class="nav-item dropdown bg-secondary rounded ms-3">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-gear"></i>
@@ -70,6 +41,34 @@
         </div>
     </div>
 </nav>
+
+<!-- Modal dialogo -->
+<div class="modal fade" id="mi-modal-post" tabindex="-1" aria-labelledby="mi-modal-postlLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="mi-modal-postlLabel">Create Post</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="was-validated">
+                <div class="mb-3">
+                  <label for="validationTextarea" class="form-label">Caption</label>
+                  <textarea class="form-control" id="validationTextarea" placeholder="Add the caption of your post here" required></textarea>
+                  <div class="invalid-feedback">
+                    <i class="fa-solid fa-camera p-2 mt-2 bg-light border"></i>
+                    <i class="fa-solid fa-location-dot p-2 bg-light border"></i>
+                  </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn bg-dark-subtle" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--Iconos de navegación-->
 <div class="container p-2">
@@ -148,7 +147,7 @@
                                     <div class="iconomegusta">
                                         <i class="fa-regular fa-heart"></i>
                                     </div>
-                                    <div class="d-flex align-items-center"><p class="ps-2 mb-0">205 likes</p></div>
+                                    <div class="d-flex align-items-center"><p class="ps-2 mb-0 likes">0 likes</p></div>
                                 </div>
                             </div>
                             <div class="row">
@@ -460,7 +459,7 @@
                                             <i class="fa-regular fa-heart"></i>
                                         </div>
                                       </div>
-                                      <div class="d-flex align-items-center"><p class="ps-2 mb-0">205 likes</p></div>
+                                      <div class="d-flex align-items-center"><p class="ps-2 mb-0">likes</p></div>
                                   </div>
                               </div>
                               <div class="row">
