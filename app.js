@@ -1,22 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const likeIcon = document.querySelector(".iconomegusta");
-    const likesCount = document.getElementById("likes");
+    const megustaElements = document.querySelectorAll(".megusta");
 
-    // Generar número aleatorio entre 0 y 1000
-    let Likesiniciales = Math.floor(Math.random() * 1001);
-    likesCount.textContent = `${Likesiniciales} likes`;
+    megustaElements.forEach(megusta => {
+        const likeIcon = megusta.querySelector(".iconomegusta i");
+        const likesCount = megusta.querySelector(".likes");
 
-    likeIcon.addEventListener("click", () => {
-        if (likeIcon.classList.contains("iconomegusta-activo")) {
-            Likesiniciales--;
-            likeIcon.classList.remove("fa-solid");
-            likeIcon.classList.add("fa-regular");
-        } else {
-            Likesiniciales++;
-            likeIcon.classList.remove("fa-regular");
-            likeIcon.classList.add("fa-solid");
-        }
-        likesCount.textContent = `${Likesiniciales} likes`;
-        likeIcon.classList.toggle("iconomegusta-activo");
+        // Generar número aleatorio entre 0 y 1000
+        let initialLikes = Math.floor(Math.random() * 1001);
+        likesCount.textContent = `${initialLikes} likes`;
+
+        likeIcon.addEventListener("click", () => {
+            let currentLikes = parseInt(likesCount.textContent);
+
+            if (likeIcon.classList.contains("fa-solid")) {
+                currentLikes--;
+                likeIcon.classList.remove("fa-solid");
+                likeIcon.classList.add("fa-regular");
+            } else {
+                currentLikes++;
+                likeIcon.classList.remove("fa-regular");
+                likeIcon.classList.add("fa-solid");
+            }
+            likesCount.textContent = `${currentLikes} likes`;
+        });
     });
 });
