@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const likesCount = megusta.querySelector(".likes");
 
         // Generar número aleatorio entre 0 y 1000
-        let initialLikes = Math.floor(Math.random() * 1001);
+        let initialLikes = Math.floor(Math.random() * 10000);
         likesCount.textContent = `${initialLikes} likes`;
 
         likeIcon.addEventListener("click", () => {
